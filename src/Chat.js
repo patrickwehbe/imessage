@@ -25,10 +25,10 @@ function Chat() {
         .collection("messages")
         .orderBy("timestamp", "desc")
         .onSnapshot((snapshot) =>
-          setMessages.map(
+          setMessages(
             snapshot.docs.map((doc) => ({
               id: doc.id,
-              data: doc.data,
+              data: doc.data(),
             }))
           )
         );
@@ -37,7 +37,8 @@ function Chat() {
 
   const sendMessage = (e) => {
     e.preventDefault();
-    db.collection("chat").doc(chatId).collection("messages").add({
+
+    db.collection("chats").doc(chatId).collection("messages").add({
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       message: input,
       uid: user.uid,
@@ -45,8 +46,7 @@ function Chat() {
       email: user.email,
       displayName: user.displayName,
     });
-
-    setInput = "";
+    setInput("");
   };
 
   return (

@@ -21,14 +21,14 @@ function SidebarChat({ id, chatName }) {
 
   return (
     <div
-      onClick={() => {
+      onClick={() =>
         dispatch(
           setChat({
             chatId: id,
             chatName: chatName,
           })
-        );
-      }}
+        )
+      }
       className="sidebarChat"
     >
       <Avatar src={chatInfo[0]?.photo} />

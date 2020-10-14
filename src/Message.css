@@ -21,7 +21,7 @@
   bottom: -5px;
   right: 0;
 }
-.neessage__sender {
+.message__sender {
   margin-left: auto;
 }
 .message__sender > .message__photo {

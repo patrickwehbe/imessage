@@ -15,7 +15,7 @@ function Login() {
           alt=""
         />
       </div>
-      <Button onClick={signIn}>SignIn</Button>
+      <Button onClick={signIn}>Sign In</Button>
     </div>
   );
 }

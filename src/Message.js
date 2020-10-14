@@ -18,7 +18,7 @@ const Message = forwardRef(
       >
         <Avatar className="message__photo" src={photo} />
         <p>{message}</p>
-        <small>{new Date(timestamp.toDdate()).toLocaleString()}</small>
+        <small>{new Date(timestamp.toDate()).toLocaleString()}</small>
       </div>
     );
   }
