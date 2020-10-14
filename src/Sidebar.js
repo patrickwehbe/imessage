@@ -4,6 +4,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import RateViewOutilinedIcon from "@material-ui/icons/RateReviewOutlined";
 
 import "./Sidebar.css";
+import SidebarChat from "./SidebarChat";
 
 function Sidebar() {
   return (
@@ -18,7 +19,11 @@ function Sidebar() {
           <RateViewOutilinedIcon />
         </IconButton>
       </div>
-      <div className="sidebar__chats"></div>
+      <div className="sidebar__chats">
+        <SidebarChat />
+        <SidebarChat />
+        <SidebarChat />
+      </div>
     </div>
   );
 }
